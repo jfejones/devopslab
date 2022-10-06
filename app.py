@@ -1,10 +1,13 @@
 from flask import Flask
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 
+csrf = CSRFProtect(app)                                                                                                                           
+
 @app.route("/")
 def pagina_inicial():
-    return "JF de Souza --- Teste"
+    return "Laboratório Pipeline DevOps - JF de Souza"
 
 if __name__ == '__main__':
     app.run()
